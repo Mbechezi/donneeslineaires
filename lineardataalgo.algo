@@ -1,0 +1,109 @@
+//solution 1 : tableaux
+
+ALGORITHM lineardata_1
+VAR
+    tab1: INTEGER [];
+    tab2: INTEGER [];
+    i,j : INTEGER;
+    som=0 : INTEGER;
+    find=false : BOOLEAN;
+
+BEGIN
+    
+    write(Saisir le tableau 1: );
+    read (tab1);
+    write (Saisir le tableau 2: );
+    read (tab2);
+
+    FOR i FROM 0 TO tab1.length STEP step  DO
+        FOR j FROM 0 TO tab2.length STEP step  DO
+            IF (tab1[i]==tab2[j]) THEN
+               find=true;
+            END_IF
+        END_FOR
+        IF (find=false) THEN
+                som+=tab1[i];
+            END_IF
+    END_FOR
+
+      FOR j FROM 0 TO tab2.length STEP step  DO
+        FOR i FROM 0 TO tab2=1.length STEP step  DO
+            IF (tab1[j]==tab2[i]) THEN
+               find=true;
+            END_IF
+        END_FOR
+        IF (find=false) THEN
+                som+=tab2[i];
+            END_IF
+    END_FOR
+
+
+//solution 2 : hashtable
+
+ALGORITHM lineardata_2
+VAR
+    tab1 : INTEGER;
+    tab2: INTEGER;
+    i, j, count = 1: INTEGER;
+    htab:HASH_TABLE<INTEGER,INTEGER>
+    
+BEGIN
+
+    chapitre retiré du cours :(
+
+            
+END
+
+
+
+
+
+//Exo 2
+
+//solution  1
+
+ALGORITHM lineardata_1
+VAR
+    tab1: INTEGER [];
+    tab2: INTEGER [];
+    i,j : INTEGER;
+    som=0 : INTEGER;
+    find= false : BOOLEAN;
+BEGIN
+   //ne pas saisir des doublons
+    write(Saisir le tableau 1: );
+
+    IF (tab1[i]==tab1[i+1]) THEN
+        read(erreur de saisi);
+    ELSE
+        read(tab1);
+    END_IF
+   
+    write (Saisir le tableau 2: );
+    IF (tab2[j]==tab2[j+1]) THEN
+        read(erreur de saisi);
+    ELSE
+        read(tab2);
+    END_IF
+
+
+
+    FOR i FROM 0 TO max tab1.length step  DO
+        FOR j FROM 0 TO tab2.length STEP step  DO
+            IF (tab1[i]==tab2[j]) THEN
+                find=true;
+            END_IF
+        END_FOR
+        IF (find=true) THEN
+            som=tab1[i]+tab2[j];
+        END_IF
+    END_FOR
+
+END
+
+
+
+
+//solution 2
+
+
